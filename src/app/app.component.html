@@ -40,9 +40,11 @@
               [ngModel]="defaultSelect"
               required
             >
-              <option value="basic">Basic</option>
-              <option value="advanced">Advanced</option>
-              <option value="pro">Pro</option>
+              <option
+                [value]="subscription"
+                *ngFor="let subscription of subscriptions"
+                >{{ subscription }}</option
+              >
             </select>
           </div>
           <div class="form-group">
